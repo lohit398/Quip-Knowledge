@@ -1,10 +1,10 @@
 {
-    "id": "FAAAjAc81Uk",
+    "id": "WCRAjA4LpvR",
     "manifest_version": 1,
     "name": "knowledge-quip-live-app",
     "description": "Quip Live App Boilerplate",
     "version_name": "0.0.0",
-    "version_number": 2,
+    "version_number": 0,
     "sizing_mode": "fit_content",
     "initial_height": 500,
     "initial_width": 500,
