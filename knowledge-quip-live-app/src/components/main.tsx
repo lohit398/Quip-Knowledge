@@ -15,7 +15,7 @@ interface MainState {
 export default class Main extends Component<MainProps, MainState> {
   setupMenuActions_(rootRecord: RootEntity) {
     menuActions.toggleHighlight = () =>
-    rootRecord.getActions().onToggleHighlight();
+      rootRecord.getActions().onToggleHighlight();
   }
 
   constructor(props: MainProps) {
@@ -45,7 +45,7 @@ export default class Main extends Component<MainProps, MainState> {
    * This component will render based on the values of `this.state.data`.
    * This function will set `this.state.data` using the RootEntity's AppData.
    */
-   private refreshData_ = () => {
+  private refreshData_ = () => {
     const { rootRecord, menu } = this.props;
     const data = rootRecord.getData();
     // Update the app menu to reflect most recent app data
@@ -65,35 +65,37 @@ export default class Main extends Component<MainProps, MainState> {
           <div className="heading">Search Article</div>
           <div className="new-article-btn">New Article</div>
         </div>
-      <div className="body">
-        <div className="body-header">
-          <select className="select-categories">
-            <option value="all">All</option>
-            <option value="Recent">Recent</option>
-          </select>
-        <input
-          type="text"
-          className="input-article-search"
-          placeholder="Search Article"
-          onKeyUp={this.handleSearch}
-          />
+        <div className="body">
+          <div className="body-header">
+            <select className="select-categories">
+              <option value="all">All</option>
+              <option value="Recent">Recent</option>
+            </select>
+            <input
+              type="text"
+              className="input-article-search"
+              placeholder="Search Article"
+              onKeyUp={this.handleSearch}
+            />
+          </div>
+        </div>
       </div>
-      </div>
-      </div>
-      );
+    );
   }
 
   handleSearch(event) {
     //e.preventDefault();
 
     var requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
+      method: "GET",
+      redirect: "follow",
     };
 
-    let endpoint = 'https://knowledgequipliveapp.us-e2.cloudhub.io/api/get/article?SearchKey='+event.target.value;
+    let endpoint =
+      "https://knowledgequipliveapp.us-e2.cloudhub.io/api/get/article?SearchKey=" +
+      event.target.value;
     fetch(endpoint)
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+      .then((response) => response.json())
+      .then((data) => console.log(data));
   }
 }
