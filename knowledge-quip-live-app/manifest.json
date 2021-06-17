@@ -1,9 +1,9 @@
 {
     "id": "WCRAjA4LpvR",
     "manifest_version": 1,
-    "name": "knowledge-quip-live-app",
-    "description": "Quip Live App Boilerplate",
-    "version_name": "0.0.0",
+    "name": "Knowledge Articles in Quip",
+    "description": "This application is to integrate knowledge articles and quip",
+    "version_name": "0.1.0",
     "version_number": 0,
     "sizing_mode": "fit_content",
     "initial_height": 500,
